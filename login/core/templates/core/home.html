@@ -4,5 +4,10 @@
 {% comment %} {% block h2 %}{{title}}{% endblock %} {% endcomment %}
 
 {% block content %}
+{% if request.user.is_authenticated %}
+<h3>Home</h3>
+<hr>
+<h4>bienvenido, {{ user.username | upper }}</h4>
+{% endif %}
 
 {% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'core/base.html' %}
+
+{% block title %}{{title}}{% endblock %}
+{% block h2 %}{{title}}{% endblock %}
+{% block content %}
+
+{% load crispy_forms_tags %}
+{% load crispy_forms_filters %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso</title>
+</head>
+<form action="" method="post">
+    {% csrf_token %}
+    <div class="container mt-5" style="max-width:400px">
+        {{ form | crispy }}
+        <a href="{% url 'recovery' %}">Recuperar contraseña</a>
+        <button type="submit" class="btn btn-sm btn-primary float-end">Ingresar</button>
+        
+    </div>
+</form>
+
+<body>
+
+</body>
+
+</html>
+{% endblock %}
