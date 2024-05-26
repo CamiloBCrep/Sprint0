@@ -19,15 +19,10 @@
     {% csrf_token %}
     <div class="container mt-5" style="max-width:400px">
         {{ form | crispy }}
-        <a href="{% url 'recovery' %}">Recuperar contraseña</a>
+        <a href="{% url 'recoveryPwd' %}">Recuperar contraseña</a>
         <button type="submit" class="btn btn-sm btn-primary float-end">Ingresar</button>
         
     </div>
 </form>
-
-<body>
-
-</body>
-
 </html>
 {% endblock %}
